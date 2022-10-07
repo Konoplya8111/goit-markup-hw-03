@@ -3,6 +3,7 @@
   --title-text-color: #757575;
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
+  --card-set-gap: 30px;
 }
 body {
   font-family: roboto, sans-serif;
@@ -16,7 +17,43 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*Контейнер меню*/
+
+.container-menu {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 0px 15px;
+  border-bottom: 1px solid #ececec;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 93px;
+}
+
+/*Лого*/
+
 .logo {
+  padding: 24px 0px 25px 0px;
+
   color: #000;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -26,30 +63,65 @@ a {
 .logo span {
   color: var(--accent-color);
 }
+
+/*Меню*/
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+}
+.site-contakt {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.site-contakt .item:not(:last-child) {
+  margin-right: 50px;
 }
 .site-contakt .link:hover,
 .site-contakt .link:focus {
   color: var(--accent-color);
 }
 .site-contakt .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-.hero-title {
+
+/* Контейнер Hero*/
+
+.container-hero {
+  width: 1600px;
   background-color: #2f303a;
+}
+
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -58,18 +130,34 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
+
+/*Герой, кнопка*/
+
 .button {
+  padding: 10px 32px;
+  margin: auto;
+  display: flex;
+  border-radius: 4px;
+  border: #ffffff;
+
   font-family: "Roboto";
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
 }
+/*Контейнер features*/
+
+.container-features {
+  width: 1170px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+/*Скрытие заголовка*/
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -82,14 +170,16 @@ a {
   clip-path: inset(50%);
   margin: -1px;
 }
-.section-title {
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+.section-features .list {
+  display: flex;
+  padding-top: 94px;
+}
+.section-features .item:not(:last-child) {
+  margin-right: 30px;
 }
 .features-title {
+  margin-bottom: 10px;
+
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -100,7 +190,50 @@ a {
   font-size: 14px;
   line-height: 1.71;
 }
+/*Контейнер work*/
+
+.container-work {
+  width: 1170px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+.section-title {
+  margin-bottom: 50px;
+  padding-top: 94px;
+
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.container-work .list {
+  display: flex;
+}
+.container-work .item:not(:last-child) {
+  margin-right: 30px;
+}
+/*Контейнер team*/
+
+.container-team {
+  width: 1700px;
+  margin: 0px auto 0px 94px;
+  padding: 0px 15px 0px 15px;
+}
+.container-team .list {
+  display: flex;
+}
+.container-team .item:not(:last-child) {
+  margin-right: 30px;
+  margin-bottom: 94px;
+}
+.container-team .card {
+  margin-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+}
 .team-title {
+  margin-bottom: 10px;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -115,29 +248,75 @@ a {
   width: 1600px;
   height: 252px;
 }
-.footer-logo {
+/*Контейнер контакти*/
+
+.container-contacts {
+  width: 1170px;
+  margin-right: auto;
+  padding: 0px 15px;
+  padding: 60px 0px 0px 118px;
+}
+.container-contacts .logo {
   color: #ffffff;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-.footer-logo span {
+.logo-footer {
+  margin-bottom: 20px;
+  display: inline-block;
+
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-footer span {
   color: var(--accent-color);
 }
 .contakt-link {
+  display: inline-block;
+
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
+.container-contacts .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .item-link {
+  display: inline-block;
+
   font-size: 14px;
   line-height: 1.71;
   color: #ffffff;
   font-style: normal;
 }
+/*Контейнер портфоліо (button)*/
+
+.container-button {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 15px;
+}
+.container-button .item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio {
+  display: flex;
+  margin-left: 297px;
+  padding-top: 94px;
+  padding-bottom: 34px;
+}
 .portfolio-button {
+  border: none;
+  padding: 6px 22px;
+
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -150,12 +329,45 @@ a {
 .portfolio-button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  border-radius: 4px;
+  border: var(--accent-color);
+}
+/*Контейнер портфоліо work*/
+
+.container-portfolio {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 15px;
+}
+.work-link {
+  margin-bottom: 20px;
+}
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+.work .item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+.card {
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.card-content {
+  padding: 15px;
 }
 .work-titly {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  margin-bottom: 4px;
 }
 .work-text {
   font-size: 16px;
