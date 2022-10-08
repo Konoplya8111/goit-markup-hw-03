@@ -377,9 +377,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
- }
-
-}
+ 
 .card-content {
   padding: 15px 24px;
 }
